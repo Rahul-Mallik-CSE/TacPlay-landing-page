@@ -64,7 +64,10 @@ const features = [
 
 const FeaturesSections = () => {
   return (
-    <section className="relative w-full overflow-hidden py-16 sm:py-20 lg:py-28">
+    <section
+      id="features"
+      className="relative w-full overflow-hidden py-16 sm:py-20 lg:py-28"
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(41,47,88,0.35)_0%,rgba(4,5,15,0.88)_46%,#04050f_76%)]"

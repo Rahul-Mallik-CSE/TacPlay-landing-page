@@ -16,19 +16,22 @@ import {
 } from "@/components/ui/dialog";
 
 const navItems = [
-  { label: "Home", href: "/" },
-  { label: "Features", href: "/features" },
-  { label: "How It Works", href: "/how-it-works" },
-  { label: "About", href: "/about" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Features", href: "/#features" },
+  { label: "How It Works", href: "/#how-it-works" },
+  { label: "About", href: "/#about" },
+  { label: "Contact Us", href: "/#contact" },
 ];
 
 const NavBar = () => {
   const pathname = usePathname();
 
   const isActiveLink = (href: string) => {
-    if (href === "/") {
-      return pathname === "/";
+    // treat anchor links as active when on root path or matching hash
+    if (!pathname) return false;
+    if (href.startsWith("/#")) {
+      const hash = href.replace("/#", "#");
+      return pathname === "/" && window.location.hash === hash;
     }
 
     return pathname === href || pathname.startsWith(`${href}/`);

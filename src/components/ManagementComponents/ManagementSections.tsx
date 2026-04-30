@@ -31,7 +31,10 @@ const managementStats = [
 
 const ManagementSections = () => {
   return (
-    <section className="relative w-full overflow-hidden py-16 sm:py-20 lg:py-28">
+    <section
+      id="about"
+      className="relative w-full overflow-hidden py-16 sm:py-20 lg:py-28"
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(28,32,66,0.4)_0%,rgba(4,5,15,0.94)_46%,#04050f_80%)]"

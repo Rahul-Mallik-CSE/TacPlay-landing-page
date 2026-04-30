@@ -30,7 +30,10 @@ const steps = [
 
 const HowItWorksSections = () => {
   return (
-    <section className="relative w-full overflow-hidden py-16 sm:py-20 lg:py-28">
+    <section
+      id="how-it-works"
+      className="relative w-full overflow-hidden py-16 sm:py-20 lg:py-28"
+    >
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(18,21,42,0.34)_0%,rgba(4,5,15,0.92)_45%,#04050f_78%)]"

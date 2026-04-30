@@ -10,7 +10,10 @@ import {
 
 const HeroSection = () => {
   return (
-    <section className="relative overflow-hidden w-full pb-10 pt-8 sm:pb-16 sm:pt-12 lg:pb-24 lg:pt-16">
+    <section
+      id="home"
+      className="relative overflow-hidden w-full pb-10 pt-8 sm:pb-16 sm:pt-12 lg:pb-24 lg:pt-16"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
           aria-hidden="true"
