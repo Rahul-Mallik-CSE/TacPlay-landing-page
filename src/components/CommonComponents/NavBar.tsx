@@ -27,11 +27,13 @@ const NavBar = () => {
   const pathname = usePathname();
 
   const isActiveLink = (href: string) => {
-    // treat anchor links as active when on root path or matching hash
+    // treat anchor links as active when on root path
     if (!pathname) return false;
     if (href.startsWith("/#")) {
-      const hash = href.replace("/#", "#");
-      return pathname === "/" && window.location.hash === hash;
+      // During SSR `window` is not available; only mark anchor active when
+      // currently on the root path. Client-side the hash may be different,
+      // but this avoids referencing `window` during build.
+      return pathname === "/";
     }
 
     return pathname === href || pathname.startsWith(`${href}/`);
