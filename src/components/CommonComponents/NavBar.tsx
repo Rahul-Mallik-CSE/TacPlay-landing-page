@@ -69,10 +69,16 @@ const NavBar = () => {
           ))}
         </nav>
 
-        <div className="hidden shrink-0 md:flex">
+        <div className="hidden shrink-0 md:flex gap-2">
           <Button
             asChild
-            className="h-10 rounded-full bg-button-bg px-6 text-[15px] font-medium text-white shadow-[0_8px_18px_rgba(175,141,78,0.28)] hover:bg-[#9f8046]!"
+            className="h-10 rounded-lg bg-gray-900 border border-gray-500 px-6 text-base font-bold text-white shadow-[0_8px_18px_rgba(175,141,78,0.28)] hover:bg-[#9f8046]!"
+          >
+            <Link href="/get-started">Install</Link>
+          </Button>
+          <Button
+            asChild
+            className="h-10 rounded-lg bg-button-bg px-6 text-base font-bold text-black shadow-[0_8px_18px_rgba(175,141,78,0.28)] hover:bg-[#9f8046]!"
           >
             <Link href="/get-started">Get Started</Link>
           </Button>
