@@ -1,6 +1,8 @@
 /** @format */
 
 import { cn } from "@/lib/utils";
+import { MotionReveal } from "./MotionReveal";
+import Image from "next/image";
 
 type SectionHeadingProps = {
   semiTitle?: string;
@@ -45,6 +47,19 @@ const SectionHeading = ({
           {description}
         </p>
       )}
+      <MotionReveal
+                  delay={0.14}
+                  className="mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row"
+                >
+                  <Image
+                    src="/images/heading-up.png"
+                    alt="Players icon"
+                    width={500}
+                    height={500}
+                    className="h-6 w-90 md:h-8 md:w-80 lg:h-8 lg:w-150"
+                  />
+                  
+                </MotionReveal>
     </div>
   );
 };

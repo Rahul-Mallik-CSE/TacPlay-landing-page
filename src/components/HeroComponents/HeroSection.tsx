@@ -12,7 +12,7 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative overflow-hidden w-full pb-10 pt-8 sm:pb-16 sm:pt-12 lg:pb-24 lg:pt-16"
+      className="relative overflow-hidden w-full pb-0 pt-8  sm:pt-12  lg:pt-16"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div
@@ -21,22 +21,28 @@ const HeroSection = () => {
         >
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(17,22,48,0.38)_0%,rgba(4,5,15,0.95)_42%,#04050f_72%)]" />
           <div className="absolute left-1/2 top-0 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,56,56,0.22)_0%,rgba(255,56,56,0.08)_35%,rgba(4,5,15,0)_72%)] blur-3xl sm:h-96 sm:w-[52rem]" />
-          <div className="absolute -bottom-24 left-1/2 h-96 w-[42rem] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(circle,rgba(238,82,82,0.52)_0%,rgba(170,42,42,0.34)_42%,rgba(4,5,15,0)_76%)] sm:h-[30rem] sm:w-[70rem]" />
+          <div className="absolute -bottom-24 left-1/2 h-96 w-[42rem] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(circle,rgba(238,82,82,0.52)_0%,rgba(170,42,42,0.34)_42%,rgba(4,5,15,0)_76%)] sm:h-[25rem] sm:w-[70rem]" />
         </div>
 
         <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center text-center">
-          <MotionReveal className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] font-semibold tracking-[0.22em] text-button-bg uppercase backdrop-blur-sm">
-            Built for modern paintball communities
-          </MotionReveal>
+          
 
           <MotionReveal delay={0.04} className="mt-6">
-            <h1 className="max-w-5xl text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-[4.5rem]">
-              Where{" "}
-              <span className="inline-block bg-[linear-gradient(90deg,#f63c3c_0%,#f5d01a_25%,#3de65e_55%,#3eb7ff_80%,#ca69ff_100%)] bg-clip-text font-black italic text-transparent [text-shadow:0_0_18px_rgba(255,255,255,0.12)]">
-                Paintball
-              </span>{" "}
-              Players Find Fields and Fields Find Players
-            </h1>
+            <div className="max-w-6xl gap-2 md:gap-4  text-balance text-lg sm:text-5xl lg:text-6xl xl:text-[4.5rem] font-semibold leading-[1.05] tracking-tight text-white ">
+              <div className="flex items-center gap-3">
+                  Where{" "}
+                  <Image
+                    src="/images/hero-name.png"
+                    alt="Paintball"
+                    width={320}
+                    height={320}
+                    priority
+                    className="h-10  w-22 md:h-18 md:w-44 lg:h-30 lg:w-52"
+                  />{" "}
+                Players Find Fields 
+              </div> 
+              and Fields Find Players
+            </div>
           </MotionReveal>
 
           <MotionReveal delay={0.1} className="mt-5 max-w-2xl">
@@ -44,6 +50,20 @@ const HeroSection = () => {
               Discover arenas, host sessions, book matches, and compete in
               ranked play all in one global platform.
             </p>
+          </MotionReveal>
+
+          <MotionReveal
+            delay={0.14}
+            className="mt-8 flex w-full flex-col items-center justify-center gap-3 sm:w-auto sm:flex-row"
+          >
+            <Image
+              src="/images/heading-up.png"
+              alt="Players icon"
+              width={500}
+              height={500}
+              className="h-6 w-90 md:h-8 md:w-80 lg:h-10 lg:w-150"
+            />
+            
           </MotionReveal>
 
           <MotionStagger
@@ -84,18 +104,18 @@ const HeroSection = () => {
             className="relative mt-12 w-full max-w-[19rem] sm:max-w-[24rem] lg:mt-16 lg:max-w-[28rem] xl:max-w-[30rem]"
           >
             <div className="absolute inset-0 -z-10 rounded-[2rem] bg-[radial-gradient(circle_at_50%_20%,rgba(255,59,59,0.4)_0%,rgba(255,59,59,0.12)_36%,rgba(4,5,15,0)_72%)] blur-2xl" />
-            <div className="rounded-[2rem] border border-[#ff6e6e]/40 bg-[#0b0f1c] p-2 shadow-[0_0_0_1px_rgba(255,80,80,0.22),0_24px_64px_rgba(0,0,0,0.45)] sm:p-3">
-              <div className="overflow-hidden rounded-[1.5rem] border border-white/10 bg-black">
+            
+              <div className="overflow-hidden max-w-5xl ">
                 <Image
-                  src="/images/Frame 2147229389.png"
+                  src="/images/hero-banner.png"
                   alt="TacPlay dashboard preview"
-                  width={1200}
-                  height={760}
+                  width={1800}
+                  height={1860}
                   priority
-                  className="h-auto w-full object-cover"
+                  className="h-full w-full "
                 />
               </div>
-            </div>
+            
           </MotionReveal>
         </div>
       </div>
