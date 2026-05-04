@@ -26,6 +26,16 @@ const Footer = () => {
             solutions and seamless experiences
           </p>
         </div>
+        {/* contact information */}
+        <div className="mt-6 flex flex-col items-center gap-2 sm:flex-row sm:justify-center sm:gap-6 text-center">
+          <a href="mailto:info@tacplay.eu" className="text-sm text-secondary hover:text-primary">
+            info@tacplay.eu
+          </a>
+          <span className="hidden sm:inline-block text-secondary">|</span>
+          <a href="tel:+34623295692" className="text-sm text-secondary hover:text-primary">
+            +34 623 295 692
+          </a>
+        </div>
 
         {/* Nav links centered */}
         <nav className="mt-8 flex flex-wrap justify-center gap-8">
