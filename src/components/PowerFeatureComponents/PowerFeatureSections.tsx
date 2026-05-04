@@ -55,7 +55,7 @@ const PowerFeatureSections = () => {
         <MotionStagger className="mt-12 grid gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
           {powerFeatures.map((feature) => (
             <MotionStaggerItem key={feature.title} className="h-full">
-              <article className="flex h-full min-h-[18rem] flex-col rounded-[1.8rem] border border-white/10 bg-[linear-gradient(180deg,rgba(16,18,30,0.98)_0%,rgba(10,11,18,0.98)_100%)] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.28)] transition-transform duration-200 hover:-translate-y-1 sm:p-6">
+              <article className="flex h-full min-h-[18rem] flex-col rounded-[1.8rem] border border-[linear-gradient(180deg,#000000,#ff0000)] bg-[linear-gradient(180deg,rgba(16,18,30,0.98)_0%,rgba(10,11,18,0.98)_100%)] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.28)] transition-transform duration-200 hover:-translate-y-1 sm:p-6">
                 <p className="text-4xl font-semibold tracking-tight text-white sm:text-[2.7rem]">
                   {feature.percent}
                 </p>

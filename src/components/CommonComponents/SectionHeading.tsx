@@ -22,7 +22,7 @@ const SectionHeading = ({
   descriptionClassName,
 }: SectionHeadingProps) => {
   return (
-    <div className={cn("mx-auto max-w-3xl text-center", className)}>
+    <div className={cn("mx-auto max-w-4xl text-center", className)}>
       {semiTitle && (
         <p className="text-[11px] font-semibold tracking-[0.18em] text-button-bg uppercase md:text-[13px]">
           {semiTitle}
@@ -40,7 +40,7 @@ const SectionHeading = ({
       {description && (
         <p
           className={cn(
-            "mt-2 md:mt-4 max-w-2xl text-base leading-7 text-secondary sm:text-lg md:text-xl",
+            "mt-2 md:mt-4 max-w-2xl mx-auto text-base text-center leading-7 text-secondary sm:text-lg md:text-xl",
             descriptionClassName,
           )}
         >
