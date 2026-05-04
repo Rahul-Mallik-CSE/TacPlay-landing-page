@@ -104,7 +104,7 @@ const DownloadSections = () => {
                 filter: "blur(40px)",
               }}
             />
-
+            {/* decorative bottom curve under the phone mockup */}
             <div className="relative w-full max-w-[320px] sm:max-w-[540px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1000px]">
               <Image
                 src="/images/download-banner.png"
@@ -114,6 +114,8 @@ const DownloadSections = () => {
                 priority
                 className="relative z-10 w-full object-contain drop-shadow-2xl"
               />
+
+              
             </div>
           </div>
         </MotionReveal>
