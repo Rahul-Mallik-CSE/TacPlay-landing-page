@@ -8,6 +8,7 @@ import ManagementSections from "@/components/ManagementComponents/ManagementSect
 import PowerFeatureSections from "@/components/PowerFeatureComponents/PowerFeatureSections";
 import FormFindingSections from "@/components/FormFindingComponents/FormFindingSections";
 import CompetetivePaintballSections from "@/components/CompetetivePaintballComponents/CompetetivePaintballSections";
+import BannerSections from "@/components/BannerComponents/BannerSections";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <ManagementSections />
       <PowerFeatureSections />
       <FormFindingSections />
+      <BannerSections />  
       <CompetetivePaintballSections />
       <DownloadSections />
     </main>

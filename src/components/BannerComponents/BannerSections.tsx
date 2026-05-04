@@ -1,47 +1,49 @@
-/** @format */
-
-"use client";
-
 import Image from "next/image";
-import React from "react";
-import SectionHeading from "@/components/CommonComponents/SectionHeading";
-import { MotionReveal } from "@/components/CommonComponents/MotionReveal";
 
 const BannerSections = () => {
   return (
-    <section id="banner" className="py-12 md:py-20">
+    <section className="relative w-full overflow-hidden py-12 sm:py-16 lg:py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:items-center">
-          <MotionReveal>
-            <div className="order-2 mt-4 md:order-1 md:mt-0">
-              <SectionHeading
-                semiTitle={"TACPLAY"}
-                title={"Bring competitive paintball to life"}
-                description={
-                  "Powerful tools for players and field owners — session management, rankings, bookings, and more."
-                }
-              />
+        <div className="relative">
+          {/* Decorative stickers - top-left, top-right, left, right, bottom-left */}
+         
 
-              <p className="mt-6 text-base text-secondary">
-                Manage arenas, create sessions, and let players discover ranked
-                matches in seconds.
-              </p>
-            </div>
-          </MotionReveal>
+          <div className="z-50 pointer-events-none absolute top-8 left-6 hidden md:block">
+            <Image src="/images/polygon-2.png" alt="sticker" width={60} height={60} />
+          </div>
 
-          <MotionReveal>
-            <div className="order-1 flex justify-center md:order-2">
-              <div className="w-[320px] sm:w-[420px] md:w-[560px] lg:w-[720px]">
-                <Image
-                  src="/images/Frame 2147229597.png"
-                  alt="Dashboard preview"
-                  width={1200}
-                  height={800}
-                  className="rounded-2xl object-cover shadow-[0_30px_60px_rgba(0,0,0,0.6)]"
-                />
+           <div className="z-50 pointer-events-none absolute bottom-8 md:bottom-16 left-6 hidden md:block">
+            <Image src="/images/polygon-1.png" alt="sticker" width={48} height={48} />
+          </div>
+
+          
+
+          {/* Main framed screenshot */}
+          <div className="relative mx-auto max-w-6xl">
+            <div className="relative rounded-3xl  bg-[linear-gradient(180deg,#0b0b10,rgba(10,11,18,0.6))] p-8 shadow-[0_40px_120px_rgba(0,0,0,0.6)]">
+              {/* Outer bezel effect */}
+              <div className="rounded-2xl border-t-2 border-l-2 border-r-2 border-white/70 p-6 bg-black/40 backdrop-blur-sm">
+                <div className="relative overflow-hidden rounded-xl bg-black">
+                  {/* Screenshot */}
+                  <div className="relative aspect-video w-full">
+                    <Image
+                      src="/images/banner.png"
+                      alt="Dashboard preview"
+                      fill
+                      sizes="(min-width: 1280px) 80rem, (min-width: 768px) 60rem, 90vw"
+                      className="object-cover"
+                      priority
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          </MotionReveal>
+          </div>
+
+          {/* Small sticker near call-to-action (right side) - use hero icon if present */}
+          <div className="pointer-events-none absolute bottom-24 right-8 hidden md:block">
+            <Image src="/images/twist-sticker.png" alt="swirl" width={44} height={44} />
+          </div>
         </div>
       </div>
     </section>
