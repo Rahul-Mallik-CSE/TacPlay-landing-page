@@ -107,10 +107,10 @@ const DownloadSections = () => {
 
             <div className="relative w-full max-w-[320px] sm:max-w-[540px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[1000px]">
               <Image
-                src="/images/Frame 2147228463.png"
+                src="/images/download-banner.png"
                 alt="TACPLAY app screens — map, dashboard, and settings"
                 width={1000}
-                height={600}
+                height={1200}
                 priority
                 className="relative z-10 w-full object-contain drop-shadow-2xl"
               />
