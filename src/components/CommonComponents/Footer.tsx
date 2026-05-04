@@ -6,7 +6,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer id="contact" className="mt-12 bg-transparent py-10">
+    <footer id="contact" className=" bg-transparent py-4 md:py-8">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Top section: Logo + Tagline centered */}
         <div className="flex flex-col items-center gap-4 text-center">
