@@ -1,7 +1,6 @@
 /** @format */
 
 import HeroSection from "@/components/HeroComponents/HeroSection";
-import BannerSections from "@/components/BannerComponents/BannerSections";
 import DownloadSections from "@/components/DownloadComponents/DownloadSections";
 import FeaturesSections from "@/components/FeaturesComponents/FeaturesSections";
 import HowItWorksSections from "@/components/HowItWorksComponents/HowItWorksSections";
@@ -14,7 +13,7 @@ export default function Home() {
   return (
     <main className="w-full overflow-x-clip">
       <HeroSection />
-      <BannerSections />
+      
       <FeaturesSections />
       <HowItWorksSections />
       <ManagementSections />
