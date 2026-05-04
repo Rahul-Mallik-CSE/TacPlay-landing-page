@@ -5,15 +5,22 @@
 import Link from "next/link";
 import React, { useState } from "react";
 
+interface CookiePreferences {
+  necessary: boolean;
+  analytics: boolean;
+  marketing: boolean;
+  preferences: boolean;
+}
+
 const CookieSettings = () => {
-  const [cookies, setCookies] = useState({
+  const [cookies, setCookies] = useState<CookiePreferences>({
     necessary: true,
     analytics: true,
     marketing: false,
     preferences: true,
   });
 
-  const handleToggle = (key: string) => {
+  const handleToggle = (key: keyof CookiePreferences) => {
     if (key !== "necessary") {
       setCookies((prev) => ({
         ...prev,
