@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaYoutube, FaInstagram, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -62,30 +63,63 @@ const Footer = () => {
         {/* Divider */}
         <div className="mt-10 border-t border-background/60" />
 
-        {/* Bottom row: copyright left, legal links right */}
+        {/* Bottom row: logo + copyright left, social + legal links right */}
         <div className="mt-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
-          <p className="text-sm text-secondary">
-            © 2026 TACPLAY. All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <Link
-              href="#"
-              className="text-sm text-secondary underline hover:text-primary"
-            >
-              Privacy Policy
-            </Link>
-            <Link
-              href="#"
-              className="text-sm text-secondary underline hover:text-primary"
-            >
-              Terms of Service
-            </Link>
-            <Link
-              href="#"
-              className="text-sm text-secondary underline hover:text-primary"
-            >
-              Cookie Settings
-            </Link>
+          <div className="flex items-center gap-4">
+            <Image
+              src="/Tacplay-logo-2.png"
+              alt="Tacplay"
+              width={120}
+              height={34}
+              className="object-contain"
+            />
+            <p className="text-sm text-secondary">© 2026 TACPLAY. All rights reserved.</p>
+          </div>
+
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.youtube.com/channel/UCox1qpxBLSIP5YutkjxS3BQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube"
+                className="text-secondary hover:text-primary transition-colors"
+              >
+                <FaYoutube className="h-5 w-5" />
+              </a>
+
+              <a
+                href="https://www.instagram.com/tacplayeu/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="text-secondary hover:text-primary transition-colors"
+              >
+                <FaInstagram className="h-5 w-5" />
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@tacplayeu"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="TikTok"
+                className="text-secondary hover:text-primary transition-colors"
+              >
+                <FaTiktok className="h-5 w-5" />
+              </a>
+            </div>
+
+            <div className="flex gap-6">
+              <Link href="#" className="text-sm text-secondary underline hover:text-primary">
+                Privacy Policy
+              </Link>
+              <Link href="#" className="text-sm text-secondary underline hover:text-primary">
+                Terms of Service
+              </Link>
+              <Link href="#" className="text-sm text-secondary underline hover:text-primary">
+                Cookie Settings
+              </Link>
+            </div>
           </div>
         </div>
       </div>
