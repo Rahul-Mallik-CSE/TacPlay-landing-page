@@ -77,7 +77,7 @@ const ManagementSections = () => {
                 
               </div>
               <div className="text-center ">
-                <h3 className="text-[1.45rem] font-semibold text-white sm:text-[1.7rem]">
+                <h3 className="text-xl md:text-2xl font-semibold text-white sm:text-[1.7rem]">
                   Manage Your Field Dashboard
                 </h3>
                 <p className="mx-auto mt-2 max-w-md text-sm leading-5 text-[#8f95b7] sm:text-[15px]">
@@ -90,7 +90,7 @@ const ManagementSections = () => {
           <MotionStaggerItem className="lg:col-span-5">
             <article className="h-full overflow-hidden rounded-[1.7rem] border border-[#c21422]/80 bg-[linear-gradient(180deg,rgba(12,15,30,0.98)_0%,rgba(8,9,18,0.98)_100%)] pt-4 shadow-[0_20px_56px_rgba(0,0,0,0.5)] sm:pt-5">
               <div className="text-center">
-                <h3 className="text-[1.45rem] font-semibold text-white sm:text-[1.7rem]">
+                <h3 className="text-xl md:text-2xl font-semibold text-white sm:text-[1.7rem]">
                   Track Booking Activity
                 </h3>
                 <p className="mx-auto mt-2 max-w-md text-sm leading-5 text-[#8f95b7] sm:text-[15px]">
@@ -115,7 +115,7 @@ const ManagementSections = () => {
 
           <MotionStaggerItem className="lg:col-span-4">
             <article className="h-full overflow-hidden rounded-[1.7rem] border border-[#c21422]/80 bg-[linear-gradient(180deg,rgba(12,15,30,0.98)_0%,rgba(8,9,18,0.98)_100%)] p-4 shadow-[0_20px_56px_rgba(0,0,0,0.5)] sm:p-5">
-              <h3 className="text-center text-[1.35rem] font-semibold leading-tight text-white sm:text-[1.7rem]">
+              <h3 className="text-center text-xl md:text-2xl font-semibold leading-tight text-white sm:text-[1.7rem]">
                 Monitor Session Performance
               </h3>
               <p className="mx-auto mt-2 max-w-sm text-center text-sm leading-5 text-[#8f95b7] sm:text-[15px]">
@@ -171,19 +171,18 @@ const ManagementSections = () => {
           </MotionStaggerItem>
 
           <MotionStaggerItem className="lg:col-span-8">
-            <article className="group p-4 md:p-6 h-full overflow-hidden rounded-[1.7rem] border border-[#c21422]/80 bg-[linear-gradient(180deg,rgba(11,14,28,0.98)_0%,rgba(7,9,19,0.98)_100%)] shadow-[0_20px_56px_rgba(0,0,0,0.5)]">
-              <div className="relative aspect-video w-full overflow-hidden rounded-xl">
+            <article className="group pt-4 md:pt-6  overflow-hidden rounded-[1.7rem] border border-[#c21422]/80 bg-[linear-gradient(180deg,rgba(11,14,28,0.98)_0%,rgba(7,9,19,0.98)_100%)] shadow-[0_20px_56px_rgba(0,0,0,0.5)]">
+              <div className="relative  aspect-video max-h-95 w-full overflow-hidden rounded-xl">
                 <Image
                   src="/images/paintball-management-3.png"
                   alt="Manage Matches and Results"
                   fill
-                  sizes="(max-width: 800px) 100vw, 66vw"
-                  className="object-cover object-center transition duration-700 group-hover:scale-[1.02]"
+                  sizes="(max-width: 600px) 100vw, 66vw"
+                  className="max-h-94 object-center transition duration-700 "
                 />
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-[linear-gradient(180deg,rgba(7,9,19,0)_0%,rgba(7,9,19,0.88)_100%)]" />
               </div>
-              <div className="mt-4 text-center">
-                <h3 className="text-[1.45rem] font-semibold text-white sm:text-[1.7rem]">
+              <div className="py-4 md:py-6 text-center">
+                <h3 className="text-xl md:text-2xl font-semibold text-white sm:text-[1.7rem]">
                   Manage Matches & Results
                 </h3>
                 <p className="mx-auto mt-2 max-w-md text-sm leading-5 text-[#8f95b7] sm:text-[15px]">

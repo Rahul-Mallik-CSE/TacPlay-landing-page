@@ -74,13 +74,13 @@ const NavBar = () => {
             asChild
             className="h-10 rounded-lg bg-gray-900 border border-gray-500 px-6 text-base font-bold text-white shadow-[0_8px_18px_rgba(175,141,78,0.28)] hover:bg-[#9f8046]!"
           >
-            <Link href="/get-started">Install</Link>
+            <Link href="/">Install</Link>
           </Button>
           <Button
             asChild
             className="h-10 rounded-lg bg-button-bg px-6 text-base font-bold text-black shadow-[0_8px_18px_rgba(175,141,78,0.28)] hover:bg-[#9f8046]!"
           >
-            <Link href="/get-started">Get Started</Link>
+            <Link href="/">Get Started</Link>
           </Button>
         </div>
 

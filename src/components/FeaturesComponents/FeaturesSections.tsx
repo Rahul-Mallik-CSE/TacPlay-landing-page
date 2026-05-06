@@ -89,25 +89,7 @@ const FeaturesSections = () => {
           />
         </MotionReveal>
 
-        {/* Tagline — distressed red stamp style, exactly as in the image */}
-        <MotionReveal>
-          <div className="mt-6 flex justify-center sm:mt-8">
-            <p
-              className="select-none text-center font-black uppercase italic tracking-widest"
-              style={{
-                fontSize: "clamp(1.4rem, 3.5vw, 2.5rem)",
-                color: "#e63232",
-                textShadow:
-                  "0 0 18px rgba(230,50,50,0.55), 2px 2px 0 rgba(0,0,0,0.55)",
-                fontFamily: "'Arial Black', 'Impact', sans-serif",
-                letterSpacing: "0.12em",
-                WebkitTextStroke: "1px rgba(255,80,80,0.35)",
-              }}
-            >
-              GEAR UP. MATCH UP. LEVEL UP.
-            </p>
-          </div>
-        </MotionReveal>
+        
 
         {/*
           Grid layout (matches the image exactly):
