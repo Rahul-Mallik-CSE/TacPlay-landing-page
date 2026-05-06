@@ -37,8 +37,8 @@ const TermsOfService = () => {
               <li>Use the materials for any commercial purpose or for any public display</li>
               <li>Attempt to decompile or reverse engineer any software contained on TACPLAY</li>
               <li>Remove any copyright or other proprietary notations from the materials</li>
-              <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
-              <li>Engage in any conduct that restricts or inhibits anyone's use or enjoyment of TACPLAY</li>
+              <li>Transfer the materials to another person or &quot;mirror&quot; the materials on any other server</li>
+              <li>Engage in any conduct that restricts or inhibits anyone&apos;s use or enjoyment of TACPLAY</li>
             </ul>
           </section>
 
@@ -63,7 +63,7 @@ const TermsOfService = () => {
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">4.1 Game Bookings</h3>
                 <p>
-                  Players agree to book games in good faith. Cancellations must be made according to the field owner's cancellation policy. No-shows may result in account penalties or suspension.
+                  Players agree to book games in good faith. Cancellations must be made according to the field owner&apos;s cancellation policy. No-shows may result in account penalties or suspension.
                 </p>
               </div>
 
@@ -77,7 +77,7 @@ const TermsOfService = () => {
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">4.3 Refund Policy</h3>
                 <p>
-                  Refunds are subject to the field owner's cancellation policy. TACPLAY does not issue refunds directly; all refund requests must be submitted through your booking.
+                  Refunds are subject to the field owner&apos;s cancellation policy. TACPLAY does not issue refunds directly; all refund requests must be submitted through your booking.
                 </p>
               </div>
             </div>
@@ -134,7 +134,7 @@ const TermsOfService = () => {
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">8. Limitation of Liability</h2>
             <p>
-              TACPLAY is provided on an "as is" basis. To the fullest extent permitted by law, TACPLAY and its owners disclaim all warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.
+              TACPLAY is provided on an &quot;as is&quot; basis. To the fullest extent permitted by law, TACPLAY and its owners disclaim all warranties, express or implied, including but not limited to warranties of merchantability, fitness for a particular purpose, and non-infringement.
             </p>
             <p className="mt-4">
               TACPLAY shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use or inability to use the service.

@@ -12,35 +12,40 @@ const HeroSection = () => {
   return (
     <section
       id="home"
-      className="relative overflow-hidden w-full pb-0 pt-8  sm:pt-12  lg:pt-16"
+      className="relative overflow-hidden w-full pb-0 pt-8 sm:pt-12 lg:pt-16"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0"
-        >
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(17,22,48,0.38)_0%,rgba(4,5,15,0.95)_42%,#04050f_72%)]" />
-          <div className="absolute left-1/2 top-0 h-72 w-[36rem] -translate-x-1/2 rounded-full bg-[radial-gradient(circle,rgba(255,56,56,0.22)_0%,rgba(255,56,56,0.08)_35%,rgba(4,5,15,0)_72%)] blur-3xl sm:h-96 sm:w-[52rem]" />
-          <div className="absolute -bottom-24 left-1/2 h-96 w-[42rem] -translate-x-1/2 rounded-[100%] bg-[radial-gradient(circle,rgba(238,82,82,0.52)_0%,rgba(170,42,42,0.34)_42%,rgba(4,5,15,0)_76%)] sm:h-[25rem] sm:w-[70rem]" />
-        </div>
+      {/* Background gradients */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        {/* Base dark background */}
+        <div className="absolute inset-0 bg-[#04050f]" />
 
+        {/* Top subtle dark overlay */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(10,12,30,0.6)_0%,transparent_60%)]" />
+
+        {/* MAIN RED GLOW — large ellipse at bottom center, full width */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[55%] w-full bg-[radial-gradient(ellipse_80%_100%_at_50%_100%,rgba(200,30,30,0.72)_0%,rgba(160,20,20,0.45)_30%,rgba(80,10,10,0.18)_60%,transparent_80%)]" />
+
+        {/* Corner darkening to keep edges black */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(4,5,15,0.5)_100%)]" />
+      </div>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="relative mx-auto flex w-full max-w-5xl flex-col items-center text-center">
-          
 
           <MotionReveal delay={0.04} className="mt-6">
-            <div className="max-w-6xl gap-2 md:gap-4  text-balance text-lg sm:text-5xl lg:text-6xl xl:text-[4.5rem] font-semibold leading-[1.05] tracking-tight text-white ">
+            <div className="max-w-6xl gap-2 md:gap-4 text-balance text-lg sm:text-5xl lg:text-6xl xl:text-[4.5rem] font-semibold leading-[1.05] tracking-tight text-white">
               <div className="flex items-center gap-3">
-                  Where{" "}
-                  <Image
-                    src="/images/hero-name.png"
-                    alt="Paintball"
-                    width={320}
-                    height={320}
-                    priority
-                    className="h-10  w-22 md:h-18 md:w-44 lg:h-30 lg:w-52"
-                  />{" "}
-                Players Find Fields 
-              </div> 
+                Where{" "}
+                <Image
+                  src="/images/hero-name.png"
+                  alt="Paintball"
+                  width={320}
+                  height={320}
+                  priority
+                  className="h-10 w-22 md:h-18 md:w-44 lg:h-30 lg:w-52"
+                />{" "}
+                Players Find Fields
+              </div>
               and Fields Find Players
             </div>
           </MotionReveal>
@@ -63,7 +68,6 @@ const HeroSection = () => {
               height={500}
               className="h-6 w-90 md:h-8 md:w-80 lg:h-10 lg:w-150"
             />
-            
           </MotionReveal>
 
           <MotionStagger
@@ -99,24 +103,23 @@ const HeroSection = () => {
             </MotionStaggerItem>
           </MotionStagger>
 
+          {/* Phone mockups — wide to match 3-phone spread */}
           <MotionReveal
             delay={0.18}
-            className="relative mt-12 w-full max-w-[19rem] sm:max-w-[24rem] lg:mt-16 lg:max-w-[28rem] xl:max-w-[30rem]"
+            className="relative mt-12 w-full max-w-4xl lg:mt-16"
           >
-            <div className="absolute inset-0 -z-10 rounded-[2rem] bg-[radial-gradient(circle_at_50%_20%,rgba(255,59,59,0.4)_0%,rgba(255,59,59,0.12)_36%,rgba(4,5,15,0)_72%)] blur-2xl" />
-            
-              <div className="overflow-hidden max-w-5xl ">
-                <Image
-                  src="/images/hero-banner.png"
-                  alt="TacPlay dashboard preview"
-                  width={1800}
-                  height={1860}
-                  priority
-                  className="h-full w-full "
-                />
-              </div>
-            
+            <div className="overflow-hidden w-full">
+              <Image
+                src="/images/hero-banner.png"
+                alt="TacPlay dashboard preview"
+                width={1800}
+                height={1860}
+                priority
+                className="h-full w-full object-contain"
+              />
+            </div>
           </MotionReveal>
+
         </div>
       </div>
     </section>

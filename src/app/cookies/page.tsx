@@ -206,7 +206,7 @@ const CookieSettings = () => {
             <div>
               <h3 className="text-lg font-semibold text-white mb-2">How to Manage Cookies</h3>
               <p>
-                You can manage and delete cookies through your browser settings. Most browsers allow you to refuse cookies or alert you when cookies are being sent. Visit your browser's help section for more information.
+                You can manage and delete cookies through your browser settings. Most browsers allow you to refuse cookies or alert you when cookies are being sent. Visit your browser&apos;s help section for more information.
               </p>
             </div>
 

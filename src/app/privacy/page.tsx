@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
           <section>
             <h2 className="text-2xl font-bold text-white mb-4">1. Introduction</h2>
             <p>
-              TACPLAY ("Company," "we," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
+              TACPLAY (&quot;Company,&quot; &quot;we,&quot; or &quot;us&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.
             </p>
             <p className="mt-4">
               Please read this Privacy Policy carefully. If you do not agree with our policies and practices, please do not use our services.
