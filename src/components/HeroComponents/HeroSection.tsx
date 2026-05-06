@@ -15,18 +15,15 @@ const HeroSection = () => {
       className="relative overflow-hidden w-full pb-0 pt-8 sm:pt-12 lg:pt-16"
     >
       {/* Background gradients */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-        {/* Base dark background */}
-        <div className="absolute inset-0 bg-[#04050f]" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 ">
+        {/* Base brand background */}
+        <div className="absolute inset-0 bg-[#E86869] mx-4 md:mx-6 rounded-b-2xl" />
 
-        {/* Top subtle dark overlay */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(10,12,30,0.6)_0%,transparent_60%)]" />
+        {/* Downward curved black gradient */}
+        <div className="absolute inset-x-0 top-0 h-[112%] bg-[radial-gradient(ellipse_120%_95%_at_50%_0%,rgba(4,5,15,1)_0%,rgba(4,5,15,0.98)_38%,rgba(4,5,15,0.88)_54%,rgba(4,5,15,0.62)_70%,rgba(4,5,15,0.24)_86%,rgba(4,5,15,0)_100%)]" />
 
-        {/* MAIN RED GLOW — large ellipse at bottom center, full width */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[55%] w-full bg-[radial-gradient(ellipse_80%_100%_at_50%_100%,rgba(200,30,30,0.72)_0%,rgba(160,20,20,0.45)_30%,rgba(80,10,10,0.18)_60%,transparent_80%)]" />
-
-        {/* Corner darkening to keep edges black */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,rgba(4,5,15,0.5)_100%)]" />
+        {/* Extra top depth for the near-black hero start */}
+        <div className="absolute inset-x-0 top-0 h-[18%] bg-[linear-gradient(to_bottom,rgba(2,3,10,0.9)_0%,rgba(2,3,10,0.45)_58%,transparent_100%)]" />
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
