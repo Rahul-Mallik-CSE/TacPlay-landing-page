@@ -80,7 +80,7 @@ const NavBar = () => {
             asChild
             className="h-10 rounded-lg bg-button-bg px-6 text-base font-bold text-black shadow-[0_8px_18px_rgba(175,141,78,0.28)] hover:bg-[#9f8046]!"
           >
-            <Link href="/">Get Started</Link>
+            <Link href="https://fields.tacplay.eu">Get Started</Link>
           </Button>
         </div>
 
