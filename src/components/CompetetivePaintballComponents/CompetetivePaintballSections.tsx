@@ -1,5 +1,9 @@
 /** @format */
 
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
 import { ArrowLeft, ArrowRight, Quote } from "lucide-react";
 
 import SectionHeading from "@/components/CommonComponents/SectionHeading";
@@ -20,40 +24,111 @@ const testimonials = [
       "bg-[linear-gradient(135deg,rgba(242,199,150,1)_0%,rgba(114,72,31,1)_100%)]",
     cardTone:
       "border-white/10 bg-[linear-gradient(180deg,rgba(16,18,30,0.98)_0%,rgba(10,11,18,0.98)_100%)]",
-    tilt: "-rotate-6",
     faded: true,
   },
   {
-    name: "Jhon Marcel",
-    location: "United State",
+    name: "Mia Carter",
+    location: "Austin, Texas",
     quote:
-      "The ranking system and match tracking features are what make this platform stand out. It brings a competitive edge that was missing before. Players stay engaged, and every match actually feels meaningful.",
-    avatar: "JM",
+      "Booking a session, finding a squad, and jumping into ranked play all feel connected. It is the first paintball app that actually feels built for competitive communities.",
+    avatar: "MC",
     avatarTone:
       "bg-[linear-gradient(135deg,rgba(242,199,150,1)_0%,rgba(114,72,31,1)_100%)]",
     cardTone:
       "border-white/10 bg-[linear-gradient(180deg,rgba(18,20,35,0.98)_0%,rgba(9,10,17,0.98)_100%)] shadow-[0_24px_70px_rgba(0,0,0,0.34)]",
-    tilt: "rotate-0",
     faded: false,
   },
   {
-    name: "Jhon Marcel",
-    location: "Portugal",
+    name: "Kai Thompson",
+    location: "Lisbon, Portugal",
     quote:
-      "The ranking system and match tracking features are what make this platform stand out. It brings a competitive edge that was missing before. Players stay engaged, and every match actually feels meaningful.",
-    avatar: "JM",
+      "The live match flow makes it easy to keep momentum going between events. Everyone knows where they stand, and that changes the energy around every match.",
+    avatar: "KT",
     avatarTone:
       "bg-[linear-gradient(135deg,rgba(242,199,150,1)_0%,rgba(114,72,31,1)_100%)]",
     cardTone:
       "border-white/10 bg-[linear-gradient(180deg,rgba(16,18,30,0.98)_0%,rgba(10,11,18,0.98)_100%)]",
-    tilt: "rotate-6",
+    faded: true,
+  },
+  {
+    name: "Noah Bennett",
+    location: "Denver, Colorado",
+    quote:
+      "The arena discovery tools and ranking ladder give casual players a reason to stay, and competitive players a reason to come back. It feels polished and useful.",
+    avatar: "NB",
+    avatarTone:
+      "bg-[linear-gradient(135deg,rgba(246,210,160,1)_0%,rgba(137,82,28,1)_100%)]",
+    cardTone:
+      "border-white/10 bg-[linear-gradient(180deg,rgba(18,20,35,0.98)_0%,rgba(8,9,15,0.98)_100%)] shadow-[0_24px_70px_rgba(0,0,0,0.28)]",
+    faded: true,
+  },
+  {
+    name: "Elena Brooks",
+    location: "Manchester, UK",
+    quote:
+      "The experience feels social without losing the intensity of competition. Scheduling, tracking, and ranking are all in one place, which is exactly what the sport needed.",
+    avatar: "EB",
+    avatarTone:
+      "bg-[linear-gradient(135deg,rgba(242,199,150,1)_0%,rgba(114,72,31,1)_100%)]",
+    cardTone:
+      "border-white/10 bg-[linear-gradient(180deg,rgba(18,20,35,0.98)_0%,rgba(9,10,17,0.98)_100%)] shadow-[0_24px_70px_rgba(0,0,0,0.34)]",
+    faded: false,
+  },
+  {
+    name: "Adrian Vega",
+    location: "Madrid, Spain",
+    quote:
+      "It is rare to see a sports product handle community, competition, and discovery this cleanly. The layout makes it very easy to get people into matches fast.",
+    avatar: "AV",
+    avatarTone:
+      "bg-[linear-gradient(135deg,rgba(246,210,160,1)_0%,rgba(137,82,28,1)_100%)]",
+    cardTone:
+      "border-white/10 bg-[linear-gradient(180deg,rgba(16,18,30,0.98)_0%,rgba(10,11,18,0.98)_100%)]",
     faded: true,
   },
 ];
 
 const CompetetivePaintballSections = () => {
+  const [activeIndex, setActiveIndex] = useState(1);
+  const itemRefs = useRef<Array<HTMLElement | null>>([]);
+
+  const getCardState = (index: number) => {
+    const total = testimonials.length;
+    const relativeIndex = (index - activeIndex + total) % total;
+
+    if (relativeIndex === 0) {
+      return "-translate-y-4 scale-[1.02] rotate-0 border-white/20 opacity-100 brightness-100 shadow-[0_28px_80px_rgba(0,0,0,0.38)]";
+    }
+
+    if (relativeIndex === 1) {
+      return "translate-y-2 rotate-[7deg] scale-[0.98] opacity-70 brightness-[0.82] saturate-[0.85]";
+    }
+
+    if (relativeIndex === total - 1) {
+      return "translate-y-2 -rotate-[7deg] scale-[0.98] opacity-70 brightness-[0.82] saturate-[0.85]";
+    }
+
+    return "translate-y-4 scale-[0.96] opacity-35 brightness-[0.72] saturate-[0.75]";
+  };
+
+  useEffect(() => {
+    itemRefs.current[activeIndex]?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "center",
+    });
+  }, [activeIndex]);
+
+  const goToPrevious = () => {
+    setActiveIndex((current) => (current - 1 + testimonials.length) % testimonials.length);
+  };
+
+  const goToNext = () => {
+    setActiveIndex((current) => (current + 1) % testimonials.length);
+  };
+
   return (
-    <section className="relative w-full overflow-hidden py-16 sm:py-20 lg:py-28">
+    <section className="relative w-full overflow-x-hidden overflow-y-visible py-16 sm:py-20 lg:py-28">
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(18,21,42,0.38)_0%,rgba(4,5,15,0.95)_46%,#04050f_80%)]"
@@ -75,14 +150,16 @@ const CompetetivePaintballSections = () => {
               <button
                 type="button"
                 aria-label="Previous testimonial"
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-[#212033] text-white/60 transition-colors hover:bg-[#2c2a42] hover:text-white"
+                onClick={goToPrevious}
+                className="inline-flex cursor-pointer h-12 w-12 items-center justify-center rounded-full bg-[#c90f18] text-white shadow-[0_0_0_1px_rgba(255,255,255,0.08)] transition-colors hover:bg-[#df141f]"
               >
                 <ArrowLeft className="h-5 w-5" />
               </button>
               <button
                 type="button"
                 aria-label="Next testimonial"
-                className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#c90f18] text-white shadow-[0_0_0_1px_rgba(255,255,255,0.08)] transition-colors hover:bg-[#df141f]"
+                onClick={goToNext}
+                className="inline-flex cursor-pointer h-12 w-12 items-center justify-center rounded-full bg-[#c90f18] text-white shadow-[0_0_0_1px_rgba(255,255,255,0.08)] transition-colors hover:bg-[#df141f]"
               >
                 <ArrowRight className="h-5 w-5" />
               </button>
@@ -90,14 +167,17 @@ const CompetetivePaintballSections = () => {
           </MotionReveal>
         </div>
 
-        <MotionStagger className="mt-12 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.15fr)_minmax(0,1fr)] lg:items-center lg:gap-8">
+        <MotionStagger className="mt-12 flex snap-x snap-mandatory gap-4 overflow-x-auto overflow-y-visible pb-8 pt-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:gap-5 lg:gap-6 lg:pt-6">
           {testimonials.map((testimonial, index) => (
             <MotionStaggerItem
               key={`${testimonial.name}-${testimonial.location}`}
-              className="h-full"
+              className="flex-none snap-center px-2 sm:px-3 md:basis-[52%] lg:basis-[40%] xl:basis-[32%]"
             >
               <article
-                className={`relative h-full overflow-hidden rounded-[2rem] border p-5 shadow-[0_20px_60px_rgba(0,0,0,0.24)] transition-transform duration-300 sm:p-6 ${testimonial.cardTone} ${testimonial.faded ? "opacity-75" : ""} ${testimonial.tilt} lg:transform-gpu`}
+                ref={(element) => {
+                  itemRefs.current[index] = element;
+                }}
+                className={`relative h-full overflow-hidden rounded-4xl border p-5 shadow-[0_20px_60px_rgba(0,0,0,0.24)] transition-all duration-300 sm:p-6 lg:transform-gpu ${testimonial.cardTone} ${testimonial.faded ? "opacity-75" : ""} ${getCardState(index)}`}
               >
                 <Quote className="h-14 w-14 text-white/10" />
                 <p
@@ -121,21 +201,19 @@ const CompetetivePaintballSections = () => {
                     </p>
                   </div>
                 </div>
-
-                {index === 1 && (
-                  <div className="mt-8 flex items-center justify-center md:mt-10">
-                    <button
-                      type="button"
-                      className="inline-flex items-center gap-2 rounded-full bg-[#c90f18] px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_32px_rgba(201,15,24,0.28)] transition-transform hover:-translate-y-0.5"
-                    >
-                      Share Your Thought
-                    </button>
-                  </div>
-                )}
               </article>
             </MotionStaggerItem>
           ))}
         </MotionStagger>
+
+        <MotionReveal delay={0.1} className="mt-10 flex justify-center">
+          <button
+            type="button"
+            className="inline-flex items-center gap-2 rounded-full bg-[#c90f18] px-5 py-3 text-sm font-semibold text-white shadow-[0_16px_32px_rgba(201,15,24,0.28)] transition-transform hover:-translate-y-0.5"
+          >
+            Share your experience
+          </button>
+        </MotionReveal>
       </div>
     </section>
   );
