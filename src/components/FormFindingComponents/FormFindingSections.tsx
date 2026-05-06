@@ -70,7 +70,7 @@ const FormFindingSections = () => {
                   <article
                     className={`relative mr-10 md:mr-14 rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(16,18,30,0.98)_0%,rgba(10,11,18,0.98)_100%)] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.26)] sm:p-6 ${index === 0 ? "md:mt-6" : "md:mt-1"}`}
                   >
-                    <div className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#c90f18] text-base font-semibold text-white shadow-[0_0_0_8px_rgba(201,15,24,0.16)]">
+                    <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#c90f18] text-base font-semibold text-white ">
                       {step.number}
                     </div>
                     <h3 className="mt-6 text-2xl font-semibold tracking-tight text-white sm:text-[1.5rem]">
@@ -115,7 +115,7 @@ const FormFindingSections = () => {
                   <article
                     className={`relative ml-10 md:ml-14 rounded-[1.75rem] border border-white/10 bg-[linear-gradient(180deg,rgba(16,18,30,0.98)_0%,rgba(10,11,18,0.98)_100%)] p-5 shadow-[0_20px_60px_rgba(0,0,0,0.26)] sm:p-6 ${index === 0 ? "md:mt-1" : "md:mt-6"}`}
                   >
-                    <div className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#c90f18] text-base font-semibold text-white shadow-[0_0_0_8px_rgba(201,15,24,0.16)]">
+                    <div className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-[#c90f18] text-base font-semibold text-white ">
                       {step.number}
                     </div>
                     <h3 className="mt-6 text-2xl font-semibold tracking-tight text-white sm:text-[1.5rem]">
