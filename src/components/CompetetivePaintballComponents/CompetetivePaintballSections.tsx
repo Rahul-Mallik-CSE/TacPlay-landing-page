@@ -90,6 +90,7 @@ const testimonials = [
 
 const CompetetivePaintballSections = () => {
   const [activeIndex, setActiveIndex] = useState(1);
+  const [hasInteracted, setHasInteracted] = useState(false);
   const itemRefs = useRef<Array<HTMLElement | null>>([]);
 
   const getCardState = (index: number) => {
@@ -112,18 +113,26 @@ const CompetetivePaintballSections = () => {
   };
 
   useEffect(() => {
+    if (!hasInteracted) {
+      return;
+    }
+
     itemRefs.current[activeIndex]?.scrollIntoView({
       behavior: "smooth",
       block: "nearest",
       inline: "center",
     });
-  }, [activeIndex]);
+  }, [activeIndex, hasInteracted]);
 
   const goToPrevious = () => {
-    setActiveIndex((current) => (current - 1 + testimonials.length) % testimonials.length);
+    setHasInteracted(true);
+    setActiveIndex(
+      (current) => (current - 1 + testimonials.length) % testimonials.length,
+    );
   };
 
   const goToNext = () => {
+    setHasInteracted(true);
     setActiveIndex((current) => (current + 1) % testimonials.length);
   };
 
