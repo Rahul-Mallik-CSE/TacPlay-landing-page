@@ -12,19 +12,19 @@ const steps = [
     number: "1",
     title: "Create & Verify",
     description:
-      "Start by creating your account and uploading your required documents. Once approved, you're ready to access all platform features.",
+      "Start by creating your account and setting up your profile. Upload required details and get verified to unlock full platform access. Once approved, you’re ready to explore matches, teams, and fields.",
   },
   {
     number: "2",
     title: "Subscribe & Access",
     description:
-      "Activate your subscription to unlock job posting or job applying. This gives you full access to hire guards or apply for available shifts.",
+      "Choose your plan to unlock features like ranked matches and team creation. Browse available sessions, join a team, and book your slot. Premium users get access to rankings, advanced stats, and priority features.",
   },
   {
     number: "3",
     title: "Work & Track",
     description:
-      "Use GPS check-in, chat, and digital contracts to complete your shifts smoothly. Every job is tracked and included in automated reports.",
+      "Join your scheduled match and play at your selected field. Field owners submit match results, and rankings update automatically. Track your performance, match history, and leaderboard progress in real-time.",
   },
 ];
 
@@ -40,7 +40,8 @@ const HowItWorksSections = () => {
           <SectionHeading
             title="How It Works"
             description="A simple flow to connect players, field owners, and teams without adding extra friction to the process."
-            className="max-w-4xl"
+            className="max-w-4xl text-center"
+            descriptionClassName="mx-auto"
           />
         </MotionReveal>
         
