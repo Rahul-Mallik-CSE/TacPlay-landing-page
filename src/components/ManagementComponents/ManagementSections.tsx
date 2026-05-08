@@ -202,7 +202,7 @@ const ManagementSections = () => {
               <article className="group pt-4 md:pt-6 h-full overflow-hidden rounded-[calc(1.7rem-1.5px)] bg-[linear-gradient(180deg,rgba(11,14,28,0.98)_0%,rgba(7,9,19,0.98)_100%)] shadow-[0_20px_56px_rgba(0,0,0,0.5)]">
                 <div className="relative  aspect-video max-h-95 w-full overflow-hidden rounded-xl">
                   <Image
-                    src="/images/paintball-management-3.png"
+                    src="/images/paintball-management-30.png"
                     alt="Manage Matches and Results"
                     fill
                     sizes="(max-width: 600px) 100vw, 66vw"

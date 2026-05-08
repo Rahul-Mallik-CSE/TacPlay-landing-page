@@ -22,7 +22,7 @@ const steps = [
   },
   {
     number: "3",
-    title: "Work & Track",
+    title: "Play and Rank up",
     description:
       "Join your scheduled match and play at your selected field. Field owners submit match results, and rankings update automatically. Track your performance, match history, and leaderboard progress in real-time.",
   },
